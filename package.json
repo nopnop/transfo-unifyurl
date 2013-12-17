@@ -1,0 +1,29 @@
+{
+  "name": "transfo-cssunifyurl",
+  "version": "0.0.0",
+  "description": "Experimental grunt-transfo stream transform copy all relative url file along css file",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nopnop/transfo-cssunifyurl.git"
+  },
+  "keywords": [
+    "grunt",
+    "transfo"
+  ],
+  "author": "Jean Ponchon <jean.ponchon@novadiscovery.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nopnop/transfo-cssunifyurl/issues"
+  },
+  "homepage": "https://github.com/nopnop/transfo-cssunifyurl",
+  "dependencies": {
+    "through2": "~0.2.3",
+    "bun": "0.0.10",
+    "eachline": "~2.4.0",
+    "underscore": "~1.5.2"
+  }
+}
