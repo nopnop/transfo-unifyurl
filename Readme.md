@@ -4,6 +4,7 @@
 
 ## Functionalities overview
 
+  - **Usefull to copy/concat third-party stylesheets**
   - Copy along css all relative assets (images, fonts, ...)
   - Update `url()` to target the copied asset
   - Use md5 hash to prevent assets name collision
