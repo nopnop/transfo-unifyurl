@@ -31,7 +31,7 @@ grunt.initConfig({
       dest: 'build/css/compiled.css',
       options: {
         // Add unifyurl to the transformation pipeline
-        transforms: [require('unifyurl')],
+        transforms: [require('transfo-unifyurl')],
         // Set unifyurl options (below the default options):
         unifyurl: {
           // Assets destination: relative to the css destination path.
