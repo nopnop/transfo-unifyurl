@@ -1,0 +1,14 @@
+.invalid {
+  /*Should ignore invalid path*/
+  background-image: url('./transfo.png');
+}
+
+.relative {
+  /*Should copy relative path*/
+  background-image: url('./images/transfo.png');
+}
+
+.absolute {
+  /*Should ignore absolute path*/
+  background-image: url('/images/transfo.png');
+}

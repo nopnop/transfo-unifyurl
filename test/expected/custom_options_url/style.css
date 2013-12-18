@@ -1,0 +1,27 @@
+.invalid {
+  /*Should ignore invalid path*/
+  background-image: url('./transfo.png');
+}
+.relative {
+  /*Should copy relative path*/
+  background-image: url("http://static.foobar.com/933999bf04133ae5df654ccb0ff41324.png");
+}
+.absolute {
+  /*Should ignore absolute path*/
+  background-image: url('/images/transfo.png');
+}
+
+/*!
+  Ionicons, v1.4.0
+  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
+  https://twitter.com/helloimben  https://twitter.com/ionicframework
+  MIT License: https://github.com/driftyco/ionicons
+*/
+@font-face {
+  font-family: "Ionicons";
+  /*Should support url parameters*/
+  src: url("http://static.foobar.com/71d13f6dcda150934035145df60fd1ba.eot");
+  src: url("http://static.foobar.com/71d13f6dcda150934035145df60fd1ba.eot") format("embedded-opentype"), url("http://static.foobar.com/32d9584f3c36886370928aea00266ae9.ttf") format("truetype"), url("http://static.foobar.com/8f7ddc0a82b002f9a3d257e03c89ba22.woff") format("woff"), url("http://static.foobar.com/852c26a7ba68ebc0f734ccb0681297a1.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
