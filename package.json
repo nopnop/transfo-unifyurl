@@ -1,6 +1,6 @@
 {
   "name": "transfo-unifyurl",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A grunt-transfo stream function to copy (and transform) all relative assets along css files",
   "main": "index.js",
   "scripts": {
