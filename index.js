@@ -1,6 +1,4 @@
 var through2 = require('through2')
-  , bun      = require('bun')
-  , eachline = require('eachline')
   , extname  = require('path').extname
   , dirname  = require('path').dirname
   , fs       = require('fs')
@@ -18,6 +16,7 @@ var matchUrl = /url\s*\(\s*(['"]?)([^)]+)\1\s*\)/g;
 module.exports = function(src, dest, options, addFile) {
 
   debug('Processing %s->%s', src, dest);
+
 
   // css
   var uopt = _.extend({
@@ -44,13 +43,13 @@ module.exports = function(src, dest, options, addFile) {
 
 
   var i = 0;
-  var rewrite = function(line, encoding, next) {
+  var rewrite = function(chunk, encoding, next) {
 
-    line = line.toString();
+    chunk = chunk.toString();
 
-    if(matchUrl.test(line)) {
+    if(matchUrl.test(chunk)) {
 
-      line = line.replace(matchUrl, function(match, quote, path, offset, str) {
+      chunk = chunk.replace(matchUrl, function(match, quote, path, offset, str) {
         var stat, from, to, uid, toUrl, hashName;
 
 
@@ -105,15 +104,15 @@ module.exports = function(src, dest, options, addFile) {
 
       });
     }
+    debug('PUSH LINE ');
 
-    this.push(line+'\n');
+    this.push(chunk);
+
+    debug('PUSH LINE ok');
 
     next();
 
   };
 
-  return bun([
-    eachline(),    // Split stream in lines
-    through2(rewrite) // Rewrite css
-  ]);
+  return through2(rewrite);
 };
