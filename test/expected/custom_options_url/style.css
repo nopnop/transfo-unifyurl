@@ -2,15 +2,26 @@
   /*Should ignore invalid path*/
   background-image: url('./transfo.png');
 }
+
 .relative {
   /*Should copy relative path*/
   background-image: url("http://static.foobar.com/933999bf04133ae5df654ccb0ff41324.png");
 }
+
+.relative2 {
+  /*Should copy relative path*/
+  background-image: url("http://static.foobar.com/933999bf04133ae5df654ccb0ff41324.png");
+}
+
 .absolute {
   /*Should ignore absolute path*/
   background-image: url('/images/transfo.png');
 }
 
+.absolute2 {
+  /*Should ignore absolute path*/
+  background-image: url('https://test.com/images/transfo.png');
+}
 /*!
   Ionicons, v1.4.0
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/

@@ -8,7 +8,17 @@
   background-image: url('./images/transfo.png');
 }
 
+.relative2 {
+  /*Should copy relative path*/
+  background-image: url('images/transfo.png');
+}
+
 .absolute {
   /*Should ignore absolute path*/
   background-image: url('/images/transfo.png');
+}
+
+.absolute2 {
+  /*Should ignore absolute path*/
+  background-image: url('https://test.com/images/transfo.png');
 }
