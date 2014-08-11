@@ -52,10 +52,11 @@ module.exports = function(src, dest, options, addFile) {
       chunk = chunk.replace(matchUrl, function(match, quote, path, offset, str) {
         var stat, from, to, uid, toUrl, hashName;
 
-
+        var abspath = /^(\w+\:|\/)/;
 
         // Only relative path
-        if(path[0] !== '.') {
+        if(abspath.test(path)) {
+
           return match;
         }
 
